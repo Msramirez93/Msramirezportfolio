@@ -47,7 +47,7 @@ async getQuakesByRadius(radius = 100) {
         this.getQuakeDetails(e.target.dataset.id);
     });
 }
-async getQuakeDetails(quakeId) {
+async getQuakeDetails(quakeId) { 
     const quake = this.quakes.getQuakeById(quakeId);
     this.quakesView.renderQuake(quake, this.parentElement);
 }
