@@ -6,5 +6,7 @@ buildNavigation(navElement);
 
 const myQuakesController = new QuakesController('#quakeList');
 myQuakesController.init();
-// const myQuakesController = new QuakesController('#quakeList');
+
+
+ //const myQuakesController = new QuakesController('#quakeList');
 // myQuakesController.getQuakesByRadius();
