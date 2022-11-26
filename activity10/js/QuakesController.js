@@ -35,14 +35,12 @@ export default class QuakesController {
 async getQuakesByRadius(radius = 100) {
     //set loading message
     this.parentElement.innerHTML = '<li>Loading...</li>';
-    // get the list of quakes in the specified radius of the location
     const quakeList = await this.quakes.getEarthQuakesByRadius(
         this.position,
         100
     );
     // render the list to html
     this.quakesView.renderQuakeList(quakeList, this.parentElement);
-    // add a listener to the new list of quakes to allow drill down in to the details
     this.parentElement.addEventListener('touchend', e => {
         this.getQuakeDetails(e.target.dataset.id);
     });
